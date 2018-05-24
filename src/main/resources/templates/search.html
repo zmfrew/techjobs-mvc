@@ -36,6 +36,8 @@
 
     <hr />
 
+    <h3 th:text="${jobs.size()} + ' Result(s)'"></h3>
+
     <table th:fragment="jobs-listing" class="job-listing" th:each="job : ${jobs}">
         <tr th:fragment="jobs-listing-nested" th:each="jobField : ${job}">
             <td th:text="${#strings.capitalizeWords(jobField.key)}"></td>
